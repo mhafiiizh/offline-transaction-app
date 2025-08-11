@@ -17,6 +17,16 @@ pipeline {
             }
         }
 
+        stage('Debug .env') {
+            steps {
+                bat """
+                    echo Path secret file: %ENV_FILE%
+                    type %ENV_FILE%
+                """
+            }
+        }
+
+
         stage('Deploy with Docker Compose') {
             steps {
                 bat """
