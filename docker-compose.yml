@@ -79,7 +79,7 @@ services:
     container_name: offline-transaction-db
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_PASSWORD="${POSTGRES_PASSWORD}"
     volumes:
       - db-data:/var/lib/postgresql/data
 
