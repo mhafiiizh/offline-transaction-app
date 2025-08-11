@@ -1,8 +1,6 @@
-version: "3.9"
-
 services:
   app:
-    image: offline-transaction:1.0
+    image: offline-transaction-app:1.0
     container_name: offline-transaction-app
     ports:
       - "8080:8080"
