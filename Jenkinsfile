@@ -9,15 +9,15 @@ pipeline {
         stage('Prepare') {
             steps {
                 echo "Menggunakan .env dari Jenkins credentials"
-                sh """
-                    cp "$ENV_FILE" .env
+                bat """
+                    copy "%ENV_FILE%" .env
                 """
             }
         }
 
         stage('Deploy with Docker Compose') {
             steps {
-                sh """
+                bat """
                     docker compose down
                     docker compose up -d --build
                 """
