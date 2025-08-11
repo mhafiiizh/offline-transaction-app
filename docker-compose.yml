@@ -50,4 +50,4 @@ services:
 
 volumes:
   db-data:
-  grafana-data:
+  grafana-storage:
