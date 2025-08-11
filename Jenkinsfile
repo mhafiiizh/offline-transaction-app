@@ -12,7 +12,7 @@ pipeline {
                 bat """
                     copy "%ENV_FILE%" .env
                 """
-                echo $DATABASE_ENDPOINT
+                echo "Database endpoint: ${env.DATABASE_ENDPOINT}"
 
             }
         }
