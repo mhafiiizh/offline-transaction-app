@@ -12,20 +12,8 @@ pipeline {
                 bat """
                     copy "%ENV_FILE%" .env
                 """
-                echo "Database endpoint: ${env.POSTGRES_PORT}"
-
             }
         }
-
-        stage('Debug .env') {
-            steps {
-                bat """
-                    echo Path secret file: %ENV_FILE%
-                    type %ENV_FILE%
-                """
-            }
-        }
-
 
         stage('Deploy with Docker Compose') {
             steps {
