@@ -3,9 +3,9 @@ services:
     image: offline-transaction-app:1.0
     container_name: offline-transaction-app
     environment:
-      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
-      - DATABASE_ENDPOINT=${DATABASE_ENDPOINT}
-      - CERTIFICATE_AUTHORITIES: |-
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      DATABASE_ENDPOINT: ${DATABASE_ENDPOINT}
+      CERTIFICATE_AUTHORITIES: |-
               -----BEGIN CERTIFICATE-----
               MIIGejCCBGKgAwIBAgIJANuKwREDEb4sMA0GCSqGSIb3DQEBCwUAMIGEMQswCQYD
               VQQGEwJOTDEVMBMGA1UECBMMWnVpZC1Ib2xsYW5kMRIwEAYDVQQHEwlSb3R0ZXJk
